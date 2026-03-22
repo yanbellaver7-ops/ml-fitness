@@ -1,5 +1,4 @@
 'use client'
-import { useState } from 'react'
 import Sidebar from '@/components/ui/Sidebar'
 import BottomNav from '@/components/ui/BottomNav'
 

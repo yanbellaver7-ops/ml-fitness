@@ -1,15 +1,15 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Dumbbell, UtensilsCrossed, Users, Settings } from 'lucide-react'
+import { TrendingUp, FileText, FlaskConical, Pill, Salad } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 const navItems = [
-  { href: '/inicio', icon: Home, label: 'Início' },
-  { href: '/treino', icon: Dumbbell, label: 'Treino' },
-  { href: '/refeicao', icon: UtensilsCrossed, label: 'Refeição' },
-  { href: '/comunidade', icon: Users, label: 'Comunidade' },
-  { href: '/config', icon: Settings, label: 'Config' },
+  { href: '/evolucao', icon: TrendingUp, label: 'Evolução' },
+  { href: '/historico', icon: FileText, label: 'Histórico' },
+  { href: '/exames', icon: FlaskConical, label: 'Exames' },
+  { href: '/prescricoes', icon: Pill, label: 'Prescrições' },
+  { href: '/plano-alimentar', icon: Salad, label: 'Dieta IA' },
 ]
 
 export default function BottomNav() {

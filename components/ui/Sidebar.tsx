@@ -1,15 +1,15 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Home, Dumbbell, UtensilsCrossed, Users, Settings, Zap } from 'lucide-react'
+import { TrendingUp, FileText, FlaskConical, Pill, Salad, Cross } from 'lucide-react'
 import { mockUser } from '@/lib/mock-data'
 
 const navItems = [
-  { href: '/inicio', icon: Home, label: 'Início' },
-  { href: '/treino', icon: Dumbbell, label: 'Treino' },
-  { href: '/refeicao', icon: UtensilsCrossed, label: 'Refeição' },
-  { href: '/comunidade', icon: Users, label: 'Comunidade' },
-  { href: '/config', icon: Settings, label: 'Config' },
+  { href: '/evolucao', icon: TrendingUp, label: 'Evolução Clínica' },
+  { href: '/historico', icon: FileText, label: 'Histórico Médico' },
+  { href: '/exames', icon: FlaskConical, label: 'Exames e Resultados' },
+  { href: '/prescricoes', icon: Pill, label: 'Prescrições' },
+  { href: '/plano-alimentar', icon: Salad, label: 'Plano Alimentar IA' },
 ]
 
 export default function Sidebar() {
@@ -19,12 +19,15 @@ export default function Sidebar() {
       <div className="p-6 border-b border-gray-100">
         <div className="flex items-center gap-2 mb-6">
           <div className="w-8 h-8 bg-[#0B201C] rounded-lg flex items-center justify-center">
-            <Zap className="w-4 h-4 text-[#22C55E]" />
+            <Cross className="w-4 h-4 text-[#22C55E]" />
           </div>
-          <span className="font-bold text-[#0B201C] text-lg">ML Fitness</span>
+          <div>
+            <span className="font-bold text-[#0B201C] text-base">Portal do Paciente</span>
+            <p className="text-[10px] text-[#827F77]">Dr. Mateus Louis</p>
+          </div>
         </div>
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full bg-[#3C5955] flex items-center justify-center text-white font-bold text-sm">JJ</div>
+          <div className="w-10 h-10 rounded-full bg-[#3C5955] flex items-center justify-center text-white font-bold text-sm">JS</div>
           <div>
             <p className="font-semibold text-[#1A1A1A] text-sm">{mockUser.name}</p>
             <span className="text-[10px] text-[#22C55E] font-medium">{mockUser.badge}</span>

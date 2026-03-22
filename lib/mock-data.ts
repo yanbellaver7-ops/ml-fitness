@@ -1,66 +1,146 @@
 export const mockUser = {
-  name: 'Jesika Jesi',
-  badge: 'Usuário Premium',
-  avatar: '/images/avatar.jpg',
+  name: 'João Silva',
+  badge: 'Paciente',
+  avatar: '',
 }
 
-export const mockStats = [
-  { label: 'Passos', value: '9.800', meta: '10.000', unit: 'passos', metaUnit: 'passos' },
-  { label: 'Kcal consumidas', value: '2.600', meta: '5.000', unit: 'kcal', metaUnit: 'kcal' },
-  { label: 'Treinos Concluídos', value: '4', meta: '14', unit: 'treinos', metaUnit: 'treinos' },
+export const mockEvolucao = [
+  {
+    id: 1,
+    data: '15 Mar 2026',
+    peso: 82.5,
+    pressao: '120/80',
+    sintomas: 'Dor lombar leve, cansaço',
+    observacoes: 'Paciente apresentou melhora significativa. Reduzir analgésico.',
+    status: 'melhora',
+  },
+  {
+    id: 2,
+    data: '01 Mar 2026',
+    peso: 84.0,
+    pressao: '130/85',
+    sintomas: 'Dor lombar intensa, insônia',
+    observacoes: 'Início do tratamento. Solicitados exames de rotina.',
+    status: 'neutro',
+  },
+  {
+    id: 3,
+    data: '12 Fev 2026',
+    peso: 85.2,
+    pressao: '135/88',
+    sintomas: 'Pressão alta, tontura',
+    observacoes: 'Ajuste de medicação para pressão. Retorno em 2 semanas.',
+    status: 'piora',
+  },
+  {
+    id: 4,
+    data: '20 Jan 2026',
+    peso: 86.0,
+    pressao: '138/90',
+    sintomas: 'Tontura, cefaleia',
+    observacoes: 'Primeira consulta. Histórico de hipertensão familiar.',
+    status: 'neutro',
+  },
 ]
 
-export const mockWorkouts = [
-  { id: 1, title: 'Força Total e Condicionamento Intenso', duration: '32min', type: 'HIIT', status: 'done', progress: 100 },
-  { id: 2, title: 'Cardio e Resistência Muscular', duration: '45min', type: 'Cardio', status: 'partial', progress: 25 },
-  { id: 3, title: 'Treino Funcional de Alta Intensidade', duration: '28min', type: 'Funcional', status: 'pending', progress: 0 },
-]
-
-export const mockNutrition = {
-  consumed: 648,
-  total: 2181,
-  target: 2500,
-  goal: 2000,
-  todayProgress: { calories: 1014, max: 1220, percent: 83 },
-  macros: [
-    { label: 'Carboidratos', current: 23, max: 72, unit: 'g', color: '#F97316' },
-    { label: 'Proteína', current: 15, max: 20, unit: 'g', color: '#6B7280' },
-    { label: 'Gordura', current: 125, max: 220, unit: 'g', color: '#EF4444' },
+export const mockHistorico = {
+  doencas: ['Hipertensão Arterial', 'Diabetes Tipo 2'],
+  alergias: ['Penicilina', 'Dipirona'],
+  cirurgias: [
+    { nome: 'Apendicectomia', ano: '2015' },
+    { nome: 'Artroscopia joelho direito', ano: '2019' },
   ],
-  weeklyProgress: [
-    { day: 'S', done: true },
-    { day: 'T', done: false },
-    { day: 'Q', done: true },
-    { day: 'Q', done: false },
-    { day: 'S', done: true },
-    { day: 'S', done: true },
-    { day: 'D', done: true },
-  ],
-  history: [
-    { id: 1, name: 'Aveia Matinal', kcal: 285, date: '23 Jan' },
-    { id: 2, name: 'Almoço Proteico', kcal: 540, date: '23 Jan' },
-    { id: 3, name: 'Lanche da Tarde', kcal: 180, date: '22 Jan' },
-  ],
-  aiMessage: 'Você está no caminho certo para sua meta de calorias hoje! Continue assim, tá bom!',
+  antecedenteFamiliar: ['Cardiopatia (pai)', 'Diabetes (mãe)', 'Hipertensão (avó materna)'],
+  dadosClinicos: {
+    tipoSanguineo: 'O+',
+    altura: '1,75m',
+    peso: '82,5 kg',
+    imc: '26,9',
+  },
 }
 
-export const mockPost = {
-  user: 'Makise Kurisu',
-  verified: true,
-  time: 'Postado há 3min',
-  text: 'Acabei de fazer uma sessão rápida de HIIT com a galera! Não esqueçam de se hidratar, pessoal! 💧',
-  hashtags: ['#DesafioHidratação', '#BebaMaisÁgua'],
-  image: '/images/workout-group.jpg',
-  stats: { duration: '52 Minutos', kcal: '128 kcal', points: '3 Pontos' },
-  engagement: { views: '5.874', likes: '215', comments: '11' },
-}
-
-export const mockCalendarDays = [
-  { day: 'Sáb', num: 26, active: false },
-  { day: 'Dom', num: 26, active: false },
-  { day: 'Seg', num: 26, active: false },
-  { day: 'Ter', num: 25, active: true },
-  { day: 'Qua', num: 26, active: false },
-  { day: 'Qui', num: 26, active: false },
-  { day: 'Sex', num: 26, active: false },
+export const mockExames = [
+  { id: 1, nome: 'Hemograma Completo', data: '10 Mar 2026', status: 'concluido', resultado: 'Hemoglobina 14,2 g/dL. Leucócitos 7.500/mm³. Plaquetas 220.000/mm³. Dentro dos limites normais.' },
+  { id: 2, nome: 'Glicemia em Jejum', data: '10 Mar 2026', status: 'concluido', resultado: 'Glicemia: 98 mg/dL. Normal.' },
+  { id: 3, nome: 'Ultrassom Abdominal', data: '18 Mar 2026', status: 'pendente', resultado: null },
+  { id: 4, nome: 'Eletrocardiograma', data: '20 Mar 2026', status: 'pendente', resultado: null },
+  { id: 5, nome: 'Colesterol Total e Frações', data: '05 Mar 2026', status: 'concluido', resultado: 'Colesterol Total: 195 mg/dL. LDL: 120 mg/dL. HDL: 52 mg/dL. Triglicerídeos: 145 mg/dL.' },
 ]
+
+export const mockPrescricoes = [
+  {
+    id: 1,
+    medicamento: 'Losartana Potássica',
+    dosagem: '50mg',
+    frequencia: '1x ao dia (manhã)',
+    duracao: 'Uso contínuo',
+    inicio: '01 Mar 2026',
+    status: 'ativo',
+  },
+  {
+    id: 2,
+    medicamento: 'Metformina',
+    dosagem: '500mg',
+    frequencia: '2x ao dia (café e jantar)',
+    duracao: 'Uso contínuo',
+    inicio: '01 Mar 2026',
+    status: 'ativo',
+  },
+  {
+    id: 3,
+    medicamento: 'Ibuprofeno',
+    dosagem: '600mg',
+    frequencia: '3x ao dia por 5 dias',
+    duracao: '5 dias',
+    inicio: '01 Mar 2026',
+    status: 'encerrado',
+  },
+  {
+    id: 4,
+    medicamento: 'Omeprazol',
+    dosagem: '20mg',
+    frequencia: '1x ao dia (em jejum)',
+    duracao: '30 dias',
+    inicio: '15 Fev 2026',
+    status: 'encerrado',
+  },
+]
+
+export const mockPlanoAlimentar = {
+  perfil: {
+    peso: '82,5 kg',
+    altura: '1,75m',
+    condicao: 'Hipertensão e Diabetes Tipo 2',
+    restricoes: ['Baixo sódio', 'Baixo açúcar'],
+    calorias: 1800,
+  },
+  semana: [
+    {
+      dia: 'Segunda',
+      refeicoes: [
+        { tipo: 'Café da manhã', descricao: 'Aveia com leite desnatado e banana, café sem açúcar' },
+        { tipo: 'Almoço', descricao: 'Frango grelhado, arroz integral, feijão, salada de folhas com azeite' },
+        { tipo: 'Lanche', descricao: 'Iogurte natural sem açúcar com maçã' },
+        { tipo: 'Jantar', descricao: 'Sopa de legumes com frango desfiado, pão integral' },
+      ],
+    },
+    {
+      dia: 'Terça',
+      refeicoes: [
+        { tipo: 'Café da manhã', descricao: 'Omelete de 2 ovos com espinafre, pão integral, chá sem açúcar' },
+        { tipo: 'Almoço', descricao: 'Peixe assado, quinoa, brócolis no vapor, cenoura' },
+        { tipo: 'Lanche', descricao: 'Castanhas (30g) e uma pera' },
+        { tipo: 'Jantar', descricao: 'Salada de atum, batata-doce cozida, salada verde' },
+      ],
+    },
+    {
+      dia: 'Quarta',
+      refeicoes: [
+        { tipo: 'Café da manhã', descricao: 'Tapioca com ricota e tomate, suco de laranja natural (sem açúcar)' },
+        { tipo: 'Almoço', descricao: 'Carne moída refogada, arroz integral, lentilha, couve refogada' },
+        { tipo: 'Lanche', descricao: 'Vitamina de abacate com leite desnatado (sem açúcar)' },
+        { tipo: 'Jantar', descricao: 'Frango ensopado com legumes, pão integral' },
+      ],
+    },
+  ],
+}
