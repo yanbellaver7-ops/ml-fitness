@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { Mail, Lock, User } from 'lucide-react'
+import React from 'react'
 import { supabase } from '@/lib/supabase'
 
 const loginSchema = z.object({
@@ -58,11 +59,10 @@ function AnimatedHero() {
   )
 }
 
-function InputField({ label, error, leftIcon, ...props }: {
+const InputField = React.forwardRef<HTMLInputElement, {
   label: string; error?: string; leftIcon?: React.ReactNode;
-  [key: string]: unknown
-}) {
-  return (
+} & React.InputHTMLAttributes<HTMLInputElement>>(
+  ({ label, error, leftIcon, ...props }, ref) => (
     <div>
       <label className="block text-xs font-medium text-gray-700 mb-1">{label}</label>
       <div className="relative">
@@ -70,14 +70,16 @@ function InputField({ label, error, leftIcon, ...props }: {
           <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">{leftIcon}</div>
         )}
         <input
+          ref={ref}
           className={`w-full border border-gray-200 rounded-lg py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#C9A84C]/40 focus:border-[#C9A84C] transition-all ${leftIcon ? 'pl-9 pr-3' : 'px-3'}`}
-          {...props as React.InputHTMLAttributes<HTMLInputElement>}
+          {...props}
         />
       </div>
       {error && <p className="mt-1 text-xs text-red-500">{error}</p>}
     </div>
   )
-}
+)
+InputField.displayName = 'InputField'
 
 export default function LoginPage() {
   const router = useRouter()
