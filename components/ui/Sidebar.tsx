@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { TrendingUp, FileText, FlaskConical, Pill, Salad, Cross } from 'lucide-react'
+import { TrendingUp, FileText, FlaskConical, Pill, PersonStanding, Cross } from 'lucide-react'
 import { mockUser } from '@/lib/mock-data'
 
 const navItems = [
@@ -9,7 +9,7 @@ const navItems = [
   { href: '/historico', icon: FileText, label: 'Histórico Médico' },
   { href: '/exames', icon: FlaskConical, label: 'Exames e Resultados' },
   { href: '/prescricoes', icon: Pill, label: 'Prescrições' },
-  { href: '/plano-alimentar', icon: Salad, label: 'Plano Alimentar IA' },
+  { href: '/corpo', icon: PersonStanding, label: 'Mapa Corporal' },
 ]
 
 export default function Sidebar() {

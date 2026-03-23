@@ -106,6 +106,29 @@ export const mockPrescricoes = [
   },
 ]
 
+export const mockCorpo = {
+  peso: 82.5,
+  altura: 1.75,
+  imc: 26.9,
+  gorduraTotal: 24, // percentual
+  regioes: [
+    { id: 'abdomen', label: 'Abdômen', gordura: 85, circunferencia: '98cm', risco: 'alto', dica: 'Circunferência acima do recomendado. Foco em cardio e dieta com baixo sódio.' },
+    { id: 'peito', label: 'Peitoral', gordura: 55, circunferencia: '102cm', risco: 'moderado', dica: 'Nível moderado. Treinos de força ajudam a reduzir.' },
+    { id: 'braco_esq', label: 'Braço Esq.', gordura: 30, circunferencia: '32cm', risco: 'baixo', dica: 'Dentro do esperado para seu perfil.' },
+    { id: 'braco_dir', label: 'Braço Dir.', gordura: 30, circunferencia: '32cm', risco: 'baixo', dica: 'Dentro do esperado para seu perfil.' },
+    { id: 'quadril', label: 'Quadril', gordura: 65, circunferencia: '105cm', risco: 'moderado', dica: 'Atenção ao quadril. Exercícios funcionais são indicados.' },
+    { id: 'coxa_esq', label: 'Coxa Esq.', gordura: 45, circunferencia: '58cm', risco: 'baixo', dica: 'Nível adequado.' },
+    { id: 'coxa_dir', label: 'Coxa Dir.', gordura: 45, circunferencia: '58cm', risco: 'baixo', dica: 'Nível adequado.' },
+    { id: 'perna_esq', label: 'Perna Esq.', gordura: 20, circunferencia: '38cm', risco: 'baixo', dica: 'Ótimo nível.' },
+    { id: 'perna_dir', label: 'Perna Dir.', gordura: 20, circunferencia: '38cm', risco: 'baixo', dica: 'Ótimo nível.' },
+  ],
+  historico: [
+    { data: 'Jan 2026', gorduraTotal: 27 },
+    { data: 'Fev 2026', gorduraTotal: 25.5 },
+    { data: 'Mar 2026', gorduraTotal: 24 },
+  ]
+}
+
 export const mockPlanoAlimentar = {
   perfil: {
     peso: '82,5 kg',
