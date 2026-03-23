@@ -65,7 +65,7 @@ export default function CorpoPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           className="rounded-2xl overflow-hidden shadow-sm mb-4 relative"
-          style={{ background: '#0a0f1e', height: 420 }}
+          style={{ background: '#f0f4f8', height: 480 }}
         >
           <div className="absolute inset-0 z-10 pointer-events-none">
             {[
